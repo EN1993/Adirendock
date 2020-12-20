@@ -1,0 +1,375 @@
+@font-face {
+ font-family: "Boots And Spurs";
+ src: url("../BootsAndSpurs.ttf") format("truetype");
+}
+
+body {
+ font-family: "Roboto";
+ min-height: 100vh;
+ margin: 0px;
+ grid-template-rows: auto 1fr auto;
+}
+
+.logo,
+h1,
+h2 {
+ font-family: "Boots And Spurs", "verdana, sans serif";
+ text-align: center;
+}
+.products h2 {
+ font-family: "roboto, verdana, geneva, tahoma, sans-serif";
+}
+.Guitars h2 {
+ font-family: "Roboto";
+}
+
+header {
+ display: flex;
+ align-items: center;
+ justify-content: space-evenly;
+}
+
+nav {
+ margin-left: 25px;
+ display: none;
+ position: fixed;
+ top: 45px;
+ background: #202020;
+ z-index: 1000;
+ right: 0px;
+}
+
+nav ul {
+ padding: 0px;
+}
+
+nav li {
+ display: block;
+ padding: 20px 30px;
+}
+#humburger-menu {
+ display: none;
+}
+#humburger-menu:checked ~ nav {
+ display: block;
+}
+/*Links*/
+a {
+ text-decoration: none;
+}
+
+.active {
+ text-decoration: underline;
+}
+
+header {
+ background: #202020;
+ color: white;
+}
+header a {
+ color: white;
+ padding: 10px;
+}
+/*
+.handmade-guitars {
+    background: #e8e8e8;
+}
+*/
+/*Home page */
+.handmade-guitars {
+ background-image: url("/images/home-header.jpg");
+ background-size: cover;
+ background-position-x: center;
+ background-position-y: bottom;
+ min-height: 70vh;
+ position: relative;
+}
+
+.handmade-guitars-welcome {
+ position: absolute;
+ text-align: center;
+ top: 50px;
+ left: 50%;
+ transform: translate(-50%);
+}
+.products--price {
+ display: flex;
+}
+.old-price {
+ text-decoration: line-through;
+ padding: 0px 10px;
+}
+.cta {
+ background: #bb0000;
+ color: white;
+ font-size: 1em;
+ text-transform: uppercase;
+ border-radius: 5px;
+}
+.cta-large {
+ padding: 10px 30px;
+}
+.cta-small {
+ padding: 8px 20px;
+ font-size: 0.8em;
+ grid-column: 2;
+ grid-row: 2;
+ min-width: 53.7px;
+ text-align: center;
+ margin: 5px;
+}
+.cta-on-sale {
+ background: #127300;
+}
+
+footer {
+ background: #202020;
+ text-align: center;
+ color: white;
+ padding: 20px;
+}
+.selling-point {
+ margin: 50px auto;
+}
+
+.selling-point h2 {
+ text-align: center;
+}
+.selling-point,
+.reviews-content {
+ max-width: 1000px;
+ display: flex;
+ flex-direction: column;
+}
+.selling-point > *,
+.reviews-content > * {
+ flex: 1;
+}
+.selling-point-images {
+ border-radius: 100px;
+ width: 100%;
+}
+.Reviews {
+ background: #e8e8e8;
+ text-align: center;
+ padding: 50px;
+}
+
+.reviews-content {
+ text-align: left;
+ margin: auto;
+}
+.reviews-content div {
+ margin: 20px;
+}
+.Reviews-images {
+ border-radius: 50%;
+ width: 80px;
+ float: right;
+}
+.reviews-name {
+ display: block;
+}
+
+/* Contact*/
+input,
+select,
+textarea {
+ border: 1px solid #c4c4c4;
+ border-radius: 5px;
+ margin: 10px 10px 10px 0px;
+ padding: 10px;
+}
+textarea {
+ height: 65%;
+ min-height: 100px;
+}
+
+.contact {
+ max-width: 1000px;
+ margin: auto;
+ text-align: center;
+ min-height: 100vh;
+}
+.form-wrapper {
+ display: flex;
+ text-align: left;
+ flex-direction: column;
+
+ margin: 50px;
+}
+
+.form-wrapper > * {
+ display: flex;
+ flex: 1;
+ flex-direction: column;
+}
+/* Product specific*/
+
+.product-specific {
+ display: flex;
+ max-width: 1000px;
+ margin-bottom: 50px;
+ min-height: 100vh;
+ flex-direction: column;
+}
+
+.product-specific > * {
+ flex: 1;
+}
+
+.product-image {
+ width: 100%;
+}
+.product-thumb {
+ display: flex;
+ justify-content: space-around;
+ gap: 10px;
+ margin-top: 5px;
+}
+
+.product-specific-details h1 {
+ text-align: center;
+}
+.product-specific-details {
+ padding: 0px 30px;
+ margin: 50px;
+}
+.product-specific-details a {
+ display: block;
+ width: 98.7px;
+ margin: auto;
+}
+
+.product-specific-price {
+ font-size: 1.5em;
+}
+
+/*featured*/
+.featured {
+ display: grid;
+ grid-template-columns: 1fr;
+ max-width: 1000px;
+ margin: 50px auto;
+ grid-gap: 10px;
+}
+
+.featured h1 {
+ grid-column: -1/1;
+ text-align: center;
+}
+
+.featured img {
+ width: 100%;
+}
+
+.products {
+ display: grid;
+ grid-template-columns: 1fr auto;
+ align-items: center;
+ margin: 20px;
+}
+.products img {
+ grid-column: -1/1;
+}
+.products h2 {
+ grid-column: 1;
+ font-size: 0.9em;
+ margin-right: 30px;
+}
+.products p {
+ margin: 0px;
+}
+
+/*Guitars page*/
+
+.guitars {
+ max-width: 1000px;
+ margin: auto;
+ text-align: center;
+}
+.product-list {
+ display: grid;
+ grid-template-columns: 1fr;
+ grid-gap: 20px;
+ max-width: 1000px;
+ margin: 50px;
+ text-align: left;
+}
+.products img {
+ width: 100%;
+}
+
+/* media queries*/
+
+@media only screen and (min-width: 400px) {
+}
+
+@media only screen and (min-width: 600px) {
+ .featured {
+  grid-template-columns: repeat(2, 1fr);
+ }
+ .selling-point,
+ .reviews-content {
+  flex-direction: row;
+ }
+ .selling-point h2 {
+  text-align: left;
+ }
+ header {
+  justify-content: start;
+ }
+ nav {
+  display: block;
+  position: static;
+ }
+ nav li {
+  display: inline-block;
+  padding: 0px;
+ }
+ header label {
+  display: none;
+ }
+ .product-list {
+  grid-template-columns: repeat(2, 1fr);
+ }
+ .product-specific {
+  flex-direction: column-reverse;
+ }
+ .product-specific-details {
+  margin-bottom: 50px;
+ }
+ .form-wrapper {
+  flex-direction: row;
+ }
+}
+
+@media only screen and (min-width: 800px) {
+ .featured {
+  grid-template-columns: repeat(4, 1fr);
+ }
+ .reviews-content div {
+  margin: 50px;
+ }
+ .handmade-guitars {
+  background-position-x: right;
+ }
+ .handmade-guitars-welcome {
+  top: 100px;
+  left: 100px;
+  transform: none;
+ }
+ .cta-large {
+  padding: 10px 60px;
+ }
+ .product-list {
+  grid-template-columns: repeat(3, 1fr);
+ }
+ .product-specific {
+  flex-direction: row;
+  margin: 50px auto;
+ }
+ .product-specific-details {
+  margin-bottom: 0px;
+ }
+}
